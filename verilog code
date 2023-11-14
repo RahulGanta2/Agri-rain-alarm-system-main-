@@ -1,0 +1,48 @@
+module RainAlert(rain_sensor,led,buzzer,irrigation_switch);
+input wire rain_sensor;
+output reg led,irrigation_switch;
+output buzzer;
+
+always @(rain_sensor) begin
+    // Assuming rain_sensor is a simple digital signal (1 for rain, 0 for no rain)
+    if (rain_sensor) begin
+        led = rain_sensor ; // Turn on LED when rain is detected
+        irrigation_switch = ~rain_sensor; 
+       // Turn off irrigation switch when rain is detected
+    end
+       else begin
+        led = rain_sensor ;
+        irrigation_switch = ~rain_sensor;
+    end 
+    end
+assign buzzer =rain_sensor;// Turn on buzzer when rain is detected
+endmodule
+
+
+
+TB
+`timescale 1ns / 1ps
+`include"p15.v"
+module RainAlert_tb;
+reg rain_sensor;
+wire led, buzzer, irrigation_switch;
+RainAlert uut (
+    .rain_sensor(rain_sensor),
+    .led(led),
+    .buzzer(buzzer),
+    .irrigation_switch(irrigation_switch)
+);
+initial begin
+    $dumpfile("p15_tb.vcd");
+    $dumpvars(0,RainAlert_tb);
+    $monitor(" rain_sensor=%b led=%b buzzer=%b irrigation_switch=%b", rain_sensor, led, buzzer, irrigation_switch);
+    rain_sensor = 0;
+    #20;
+    rain_sensor = 1;
+    #20;
+    rain_sensor = 0;
+    #20;
+    $finish;
+end
+
+endmodule
