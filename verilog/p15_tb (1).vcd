@@ -1,0 +1,43 @@
+$date
+	Thu Nov 09 00:49:43 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module RainAlert_tb $end
+$var wire 1 ! led $end
+$var wire 1 " irrigation_switch $end
+$var wire 1 # buzzer $end
+$var reg 1 $ rain_sensor $end
+$scope module uut $end
+$var wire 1 # buzzer $end
+$var wire 1 $ rain_sensor $end
+$var reg 1 " irrigation_switch $end
+$var reg 1 ! led $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0$
+0#
+1"
+0!
+$end
+#20000
+0"
+1!
+1#
+1$
+#40000
+1"
+0!
+0#
+0$
+#60000
