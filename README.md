@@ -175,7 +175,9 @@ should be OFF (to stop irrigation).
 ## Logisim Circuit Diagram :
 
 <details>
-  ![image](https://github.com/RahulGanta2/Agri-rain-alarm-system-main-/blob/main/assets/148901728/a0d3335a-a84c-43c9-aff7-f436329544b9.png)
+
+  <img src="https://github.com/RahulGanta2/Agri-rain-alarm-system-main-/assets/148901728/e5f5ac6c-b45a-4a0d-9200-d17dfacf9844" /> 
+
 </details>
 
 
